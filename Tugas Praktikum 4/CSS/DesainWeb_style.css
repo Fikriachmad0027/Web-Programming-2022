@@ -1,0 +1,55 @@
+body {
+    background-color:white;
+}
+.img2 {
+    width: 17px;
+}
+.img1 {
+    border-radius: 100%;
+    border: solid 10px;
+    border-color: rgb(206, 206, 206);
+}
+fieldset {
+    background-color: whitesmoke;
+}
+.hero {
+    display: inline;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.villan {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    font-size: 17px;
+}
+nav {
+    display: inline;
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px; 
+    font-size: 17px;
+    text-align: left;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+section {
+    float: left;
+    margin-left: 50px;
+    font-size: 17px;
+}
+footer {
+    float: left;
+    margin-left: 50px;
+}
+.ks {
+    display: inline;
+    margin-left: 5em;
+}
+.ko {
+    display: inline;
+    margin-left: 5em;
+}
