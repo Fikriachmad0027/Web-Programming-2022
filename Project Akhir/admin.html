@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>admin</title>
+
+  <!-- Google Font: Source 
+    Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-info elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/Logo SIUMNI.png" alt="SIUMNI Logo" class="brand-image img-circle elevation-3" style="opacity: 100">
+      <span class="brand-text font-weight-light">SIUMNI - STTNF</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">My Admin</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Informasi Alumni</p>
+                </a>
+              </li>
+            </ul>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-joint"></i>
+              <p>
+                Loker
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-business-time"></i>
+              <p>
+                Mitra NF
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <button type="button">
+                Logout
+              </button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h4 class="m-0">Data Mahasiswa</h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Admin</a> <i class="right fas fa-angle-right"></i></li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <hr>
+        <form>
+          <div class="form-group row">
+            <label for="select" class="col-1 col-form-label">Angkatan :</label> 
+            <div class="col-3">
+              <select id="select" name="select" class="custom-select">
+                <option value="#">2021</option>
+                <option value="#">2020</option>
+                <option value="#">2019</option>
+                <option value="#">2018</option>
+                <option value="#">2017</option>
+              </select>
+              <link href="" id="table">
+            </div>
+          </div> 
+        </form>
+        <div class="col-md-12" id="tabel" >
+          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+              <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </button>
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Daftarkan Alumni</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="row">
+                      <label for="Cari" class="col-4 col-form-label">Nama Alumni :</label> 
+                      <div class="col-8">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      </div>
+                    </div><hr>
+                    <div class="form-group row">
+                      <label for="Program-Studi" class="col-4 col-form-label">Program Studi :</label> 
+                      <div class="col-8">
+                        <input id="Program-Studi" name="Program-Studi" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="Tahun-masuk" class="col-4 col-form-label">Tahun Masuk :</label> 
+                      <div class="col-8">
+                        <input id="Tahun-masuk" name="Tahun-masuk" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="Tahun-lulus" class="col-4 col-form-label">Tahun Lulus :</label> 
+                      <div class="col-8">
+                        <input id="Tahun-lulus" name="Tahun-lulus" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="Alamat" class="col-4 col-form-label">Alamat Linkedin :</label> 
+                      <div class="col-8">
+                        <input id="Alamat" name="Alamat" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="Pekerjaan" class="col-4 col-form-label">Pekerjaan :</label> 
+                      <div class="col-8">
+                        <input id="Pekerjaan" name="Pekerjaan" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="textarea" class="col-4 col-form-label">Alamat Kantor :</label> 
+                      <div class="col-8">
+                        <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
+                      </div>
+                    </div> 
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="table table-bordered" id="">
+            <thead>
+              <tr class="table-active">
+                <th>
+                  No
+                </th>
+                <th>
+                  Angkatan
+                </th>
+                <th>
+                  NIM
+                </th>
+                <th>
+                  Nama Lengkap
+                </th>
+                <th>
+                  Pekerjaan
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-info">
+                <td>
+                  1
+                </td>
+                <td>
+                  2021
+                </td>
+                <td>
+                  0110221120
+                </td>
+                <td>
+                  Maulidhiansyah Bayu Setiawan
+                </td>
+                <td>
+                  Founder Startup
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  2021
+                </td>
+                <td>
+                  0110221122
+                </td>
+                <td>
+                  Fikri Achmad Fauzan
+                </td>
+                <td>
+                  Programmer
+                </td>
+              </tr>
+              <tr class="table-info">
+                <td>
+                  2
+                </td>
+                <td>
+                  2021
+                </td>
+                <td>
+                  0110221123
+                </td>
+                <td>
+                  Hanifa Rahmani Virdynata
+                </td>
+                <td>
+                  Dosen
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  3
+                </td>
+                <td>
+                  2021
+                </td>
+                <td>
+                  0110221128
+                </td>
+                <td>
+                  Muhamad Hasan
+                </td>
+                <td>
+                  Web developer
+                </td>
+              </tr>
+              <tr class="table-info">
+                <td>
+                  4
+                </td>
+                <td>
+                  2021
+                </td>
+                <td>
+                  0110221131
+                </td>
+                <td>
+                  Hijri Azam
+                </td>
+                <td>
+                  Security engineer
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- Table-->
+<script src="dist/js/script.js"></script>
+</body>
+</html>
